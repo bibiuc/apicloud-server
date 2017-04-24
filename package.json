@@ -1,0 +1,18 @@
+{
+  "name": "apicloud-server",
+  "version": "0.0.1",
+  "description": "使用express和websocket实现apicloud协议。",
+  "main": "index.js",
+  "repository": "https://github.com/bibiuc/apicloud-server.git",
+  "author": "bbuc <bbuc@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.6.4",
+    "express": "^4.15.2",
+    "fs-extra-promise": "^1.0.1",
+    "globby": "^6.1.0",
+    "lodash": "^4.17.4",
+    "sha1": "^1.1.1",
+    "ws": "^2.3.1"
+  }
+}
