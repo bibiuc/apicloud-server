@@ -2,7 +2,10 @@ var Server = require('../index.js');
 var WebSocket = require('ws');
 
 var server = new Server({
-  projects: ['/Users/xukaixuan/Projects/taxi/passenger-gulp-app/*', '/Users/xukaixuan/Projects/taxi/hx-ser/svn/*']
+  projects: [
+    '/Users/xukaixuan/Projects/taxi/passenger-gulp-app/*',
+    '/Users/xukaixuan/Projects/taxi/hx-ser/svn/*'
+  ]
 });
 server.onLog(console.log);
 setTimeout(function () {
@@ -13,5 +16,12 @@ setTimeout(function () {
       appid: 'A6932196309087',
       timestamp: new Date().getTime() / 1000
     }));
+  });
+}, 2000);
+
+setTimeout(function () {
+  server.sync({
+    project: '/Users/xukaixuan/Projects/taxi/passenger-gulp-app/build',
+    updateAll: false
   });
 }, 2000);
