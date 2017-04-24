@@ -14,14 +14,15 @@ setTimeout(function () {
     ws.send(JSON.stringify({
       command: 2,
       appid: 'A6932196309087',
-      timestamp: new Date().getTime() / 1000
+      timestamp: (new Date().getTime() / 1000) - 3000
     }));
   });
 }, 2000);
 
 setTimeout(function () {
+  server.ignore('A6932196309087', '/Users/xukaixuan/Projects/taxi/passenger-gulp-app/build/config.xml');
   server.sync({
     project: '/Users/xukaixuan/Projects/taxi/passenger-gulp-app/build',
-    updateAll: false
+    updateAll: true
   });
-}, 2000);
+}, 1000);
